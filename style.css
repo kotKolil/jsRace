@@ -1,0 +1,18 @@
+* {
+    display: block;
+}
+#car1 {
+    position: fixed;
+    left: 9px;
+    top:20px;
+}
+#car2 {
+    position: fixed;
+    left: 9px;
+    top:30px
+}
+#car3 {
+    position: fixed;
+    left: 9px;
+    top:40px
+}
