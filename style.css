@@ -1,18 +1,45 @@
+body {
+    background-color: #38373e;
+    margin-left: 0px;
+    font-family: Tahoma;
+}
+
 * {
     display: block;
 }
-#car1 {
-    position: fixed;
-    left: 9px;
-    top:20px;
+
+
+.header {
+    padding: 0px;
+    background-color: #1f1e25;
+    height: 15vh;
+    width: 100vw;
+    color:  #cb4207;
+
 }
-#car2 {
-    position: fixed;
-    left: 9px;
-    top:30px
+
+.content {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 97vw;
 }
-#car3 {
-    position: fixed;
-    left: 9px;
-    top:40px
+
+.content * {
+    padding: 10px;
+}
+
+.content button {
+    border-radius: 7px;
+}
+
+.cars{
+    margin: 5px;
+    flex-wrap: nowrap;
+}
+
+.car {
+    margin-left: 0px;
 }

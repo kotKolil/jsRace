@@ -1,18 +1,27 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="RU-ru">
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="style.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src = "script.js" ></script>
+        <title></title>
     </head>
     <body>
-        <div>
-            <p id = "car1">#</p>
-            <p style='color:red' id = "car2">#</p>
-            <p style='color:deepskyblue' id = "car3">#</p>
+        <div class = "header">
+            <H1 align = "center">The jsRace</H1>
+            <p align = "center">Type a words to move you car and defeat you enemies!</p>
         </div>
-        <label for = "answer" id = "currentWord" ></label>
-        <input type="text" placeholder="enter text" id = "answer">
+        <div class = "content">
+            <button id="start_button">start a game</button>
+            <label for = "answer" id = "currentWord" ></label>
+            <input type="text" placeholder="enter text" id = "answer">
+        </div>
+        <div class ="cars">
+            <p id = "car" class="car">#</p>
+            <p style='color:red' id = "car1" class="car">#</p>
+            <p style='color:deepskyblue' id = "car2" class="car">#</p>
+        </div>
+
+        <script src = "script.js" ></script>
     </body>
 </html>

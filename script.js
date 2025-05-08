@@ -11,45 +11,48 @@ var currentWord = 0
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
-$(document).ready(() => {
-    $("#currentWord").text(stringArr[currentWord])
+
+$(document).ready( () => {
+
+    $("#start_button").on("click", () => {
+        $("#currentWord").text(stringArr[currentWord])
 
 
-    const carArr = [$("#car1"), $("#car2")];
-    setInterval(() => {
+        var carArr = [$("#car1"), $("#car2")];
+        setInterval(() => {
+            carArr.forEach((elem) => {
+                var currentPosition = elem.css("margin-left");
+                console.log(currentPosition)
 
-        carArr.forEach( (elem) => {
+                if (currentPosition > window.innerWidth * 0.9) {
+                    console.log("САСИ")
+                }
 
-            var currentPosition = elem.position().left;
+            elem.css({"margin-left": (currentPosition + 20) + "px" })
+        }, 1);
+    });
 
-            if ( currentPosition > 90 * window.screen.width / 100 ) {
-                console.log("bots win!")
+    $(document).on('keypress', (e) => {
+        if (e.key === "Enter") {
+            answer = $("#answer").val()
+
+            if (answer === stringArr[currentWord]) {
+
+                elem = $("#car3")
+                var currentPosition = elem.position().left;
+                elem.css("left", currentPosition + 35 + "px");
+                $("#answer").val('')
+
+                currentWord += 1
+                $("#currentWord").text(stringArr[currentWord])
+
             }
-
-            elem.css("left", currentPosition + 1 + "px");
-        })
-    }, 1);
-});
-
-$(document).on('keypress', (e) => {
-    if (e.key === "Enter" ) {
-        answer = $("#answer").val()
-
-        if (answer === stringArr[currentWord]) {
-
-            elem = $("#car3")
-            var currentPosition = elem.position().left;
-            elem.css("left", currentPosition + 35 + "px");
-            $("#answer").val('')
-
-            currentWord += 1
-            $("#currentWord").text(stringArr[currentWord])
-
         }
-    }
-})
+    })
 
-$(document).on("paste", (e) => {
-    alert("Pasting is not allowed!");
-    e.preventDefault();
-});
+    $(document).on("paste", (e) => {
+        alert("Pasting is not allowed!");
+        e.preventDefault();
+    });
+    }
+)
