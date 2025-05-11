@@ -36,8 +36,14 @@ body {
 }
 
 .cars{
+    height: 10vw;
     margin: 5px;
+    width: 99vw;
     flex-wrap: nowrap;
+    background-image: url("img/road.svg");
+    /*background-repeat: repeat-x;*/
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .car {
