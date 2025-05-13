@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <title>jsRace</title>
     </head>
     <body>
         <div class = "header">
-            <H1 align = "center">The jsRace</H1>
-            <p align = "center">Type a words to move you car and defeat you enemies!</p>
+            <H1 >The jsRace</H1>
+            <p>Type a words to move you car and defeat you enemies!</p>
+            <label  for="speedSlider">Select speed of you enemy </label>
+            <input type="range" id = "speedSlider" min = "1" max = "7" />
         </div>
         <div class = "content">
             <button id="start_button">start a game</button>
@@ -20,7 +21,6 @@
         <div class ="cars">
             <img id="car3" src="img/car.svg" />
             <img id="car1" src="img/car.svg" />
-            <img id="car2" src="img/car.svg" />
 
         </div>
 

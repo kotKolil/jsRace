@@ -6,17 +6,24 @@ body {
 
 * {
     display: block;
+    margin: 0px;
 }
 
 
 .header {
     padding: 0px;
     background-color: #1f1e25;
-    height: 15vh;
     width: 100vw;
-    color:  #cb4207;
-
+    color: #cb4207;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
 }
+
 
 .content {
     display: flex;
